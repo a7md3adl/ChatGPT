@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ChatGPT.AppShell"
+    Title="ChatGPT"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ChatGPT"
+    Shell.NavBarIsVisible="False"
+    Shell.FlyoutBehavior="Flyout">
+
+    <!--<ShellContent
+        
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    <!--<FlyoutItem>
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+    </FlyoutItem>-->
+    <Shell.FlyoutHeader>
+        <Label>
+        <Label.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="WPF,UWP" Value="0" />
+                <On Platform="Android,iOS" Value="25" />
+            </OnPlatform>
+        </Label.HeightRequest>
+        </Label>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="ChatGPT" Icon="chatgpt.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Bard" Icon="gbard.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Bard}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Google" Icon="googleicon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Google}" />
+    </FlyoutItem>
+    <FlyoutItem Title="YouTube" Icon="youtubeicon.png">
+        
+        <ShellContent ContentTemplate="{DataTemplate local:YouTube}" />
+    </FlyoutItem>
+
+
+</Shell>
