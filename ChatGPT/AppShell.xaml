@@ -29,15 +29,15 @@
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
     </FlyoutItem>
     <FlyoutItem Title="Bard" Icon="gbard.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Bard}" />
+        <ShellContent ContentTemplate="{DataTemplate local:Bard}" Route="Bard" />
     </FlyoutItem>
 
     <FlyoutItem Title="Google" Icon="googleicon.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Google}" />
+        <ShellContent ContentTemplate="{DataTemplate local:Google}" Route="Google" />
     </FlyoutItem>
     <FlyoutItem Title="YouTube" Icon="youtubeicon.png">
-        
-        <ShellContent ContentTemplate="{DataTemplate local:YouTube}" />
+
+        <ShellContent ContentTemplate="{DataTemplate local:YouTube}"  Route="YouTube"/>
     </FlyoutItem>
 
 
