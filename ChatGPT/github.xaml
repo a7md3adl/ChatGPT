@@ -3,13 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ChatGPT"
              
-             x:Class="ChatGPT.MainPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="Add_Clicked" />
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
-    </ContentPage.ToolbarItems>
+             x:Class="ChatGPT.github">
+
     <StackLayout>
-        <WebView x:Name="webView" Source="https://chat.openai.com/" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <WebView x:Name="webView" Source="https://github.com/a7md3adl" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         <!--<Entry x:Name="usernameEntry" Placeholder="Username" />
         <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="true" />
         <Button Text="Sign In" Clicked="SignInButton_Clicked" />-->

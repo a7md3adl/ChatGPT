@@ -8,11 +8,11 @@ using WebView = Microsoft.Maui.Controls.WebView;
 
 namespace ChatGPT;
 
-public partial class MainPage : ContentPage
+public partial class github : ContentPage
 {
 	int count = 0;
-    Uri appuri = new Uri("https://chat.openai.com/");
-	public MainPage()
+    Uri appuri = new Uri("https://github.com/a7md3adl");
+	public github()
 	{
         InitializeComponent();
         //webView.IsVisible = false;
@@ -25,9 +25,6 @@ public partial class MainPage : ContentPage
        // webView.Source = "https://chat.openai.com/";
         webView.Navigated += WebView_Navigated;
         webView.Loaded += WebView_Loaded;
-        System.Net.CookieContainer cookie = new System.Net.CookieContainer();
-        cookie.SetCookies(appuri, "Ahmed");
-        webView.Cookies = cookie;
         webView.Navigating += WebView_Navigating;   
         //Window.Page.IconImageSource = ImageSource.FromFile("ChatGPT.png");
 
@@ -49,7 +46,7 @@ public partial class MainPage : ContentPage
     private void WebView_Navigated(object sender, WebNavigatedEventArgs e)
     {
 
-        if (e.Url == "https://chat.openai.com/")
+        if (e.Url == "https://github.com/a7md3adl")
         {
             if (e.Result == WebNavigationResult.Failure || e.Result == WebNavigationResult.Timeout)
             {
@@ -83,15 +80,5 @@ public partial class MainPage : ContentPage
 
 		//SemanticScreenReader.Announce(CounterBtn.Text);
 	}
-
-    private void Add_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void Save_Clicked(object sender, EventArgs e)
-    {
-
-    }
 }
 

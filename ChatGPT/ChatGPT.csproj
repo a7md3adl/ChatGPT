@@ -105,10 +105,13 @@
 	  <None Remove="Resources\AppIcon\appicon.png" />
 	  <None Remove="Resources\Images\chatgpt.png" />
 	  <None Remove="Resources\Images\gbard.png" />
+	  <None Remove="Resources\Images\git.png" />
 	  <None Remove="Resources\Images\GoogleIcon.png" />
 	  <None Remove="Resources\Images\YoutubeIcon.png" />
 	</ItemGroup>
-
+	<ItemGroup Condition="$(TargetFramework.Contains('-windows')) != false">
+		<ProjectReference Include="..\WinFormsLibrary1\WinFormsLibrary1.csproj" />
+	</ItemGroup>
 	<ItemGroup>
 	  <Content Include="$placeholder$.scale-400.png" />
 	</ItemGroup>
@@ -128,6 +131,9 @@
 	  <Compile Update="Bard.xaml.cs">
 	    <DependentUpon>Bard.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="github.xaml.cs">
+	    <DependentUpon>github.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="YouTube.xaml.cs">
 	    <DependentUpon>YouTube.xaml</DependentUpon>
 	  </Compile>
@@ -138,6 +144,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Bard.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="github.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="YouTube.xaml">

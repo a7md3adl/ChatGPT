@@ -5,16 +5,19 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ChatGPT"
-    Shell.NavBarIsVisible="False"
+    Shell.FlyoutBackgroundColor="#101010"
     Shell.FlyoutBehavior="Flyout">
-
-    <!--<ShellContent
-        
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
-    <!--<FlyoutItem>
-        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
-    </FlyoutItem>-->
+    <Shell.TitleView>
+        <StackLayout>
+            <Button Text="ç" BackgroundColor="Transparent" FontFamily="wingdings" FontSize="Large" TextColor="WhiteSmoke" Clicked="Button_Clicked" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start"></Button>
+        </StackLayout>
+    </Shell.TitleView>
+    <Shell.NavBarIsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <On Platform="WPF,UWP" Value="false" />
+            <On Platform="Android,iOS" Value="false" />
+        </OnPlatform>
+    </Shell.NavBarIsVisible>
     <Shell.FlyoutHeader>
         <Label>
         <Label.HeightRequest>
@@ -35,10 +38,19 @@
     <FlyoutItem Title="Google" Icon="googleicon.png">
         <ShellContent ContentTemplate="{DataTemplate local:Google}" Route="Google" />
     </FlyoutItem>
+
+    <FlyoutItem Title="git" Icon="git.png">
+        <ShellContent ContentTemplate="{DataTemplate local:github}" Route="github" />
+    </FlyoutItem>
+
     <FlyoutItem Title="YouTube" Icon="youtubeicon.png">
 
         <ShellContent ContentTemplate="{DataTemplate local:YouTube}"  Route="YouTube"/>
     </FlyoutItem>
 
+    <Shell.FlyoutFooter>
+        <Label Text="alexand®rina software ©️" HorizontalTextAlignment="Center" BackgroundColor="#101010" />
 
+
+    </Shell.FlyoutFooter>
 </Shell>
